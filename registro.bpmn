@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1iycyuk" targetNamespace="http://bpmn.io/schema/bpmn" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="16.4.0">
+  <bpmn:process id="Process_0z7ho1f" isExecutable="false">
+    <bpmn:startEvent id="StartEvent_1txi3qa" name="Primer uso de la aplicación">
+      <bpmn:outgoing>Flow_1efygb2</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:userTask id="Activity_1tcjezw" name="Creación de credenciales">
+      <bpmn:incoming>Flow_1efygb2</bpmn:incoming>
+      <bpmn:outgoing>Flow_1ccclw0</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1sxw5wf</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_1efygb2" sourceRef="StartEvent_1txi3qa" targetRef="Activity_1tcjezw" />
+    <bpmn:dataStoreReference id="DataStoreReference_1d4hqfo" name="Base de datos de usuarios" />
+    <bpmn:intermediateCatchEvent id="Event_1jf9w7i" name="Credenciales">
+      <bpmn:incoming>Flow_1ccclw0</bpmn:incoming>
+      <bpmn:dataOutputAssociation id="DataOutputAssociation_1fr4txn">
+        <bpmn:targetRef>DataStoreReference_1d4hqfo</bpmn:targetRef>
+      </bpmn:dataOutputAssociation>
+      <bpmn:messageEventDefinition id="MessageEventDefinition_0dmbvk9" />
+    </bpmn:intermediateCatchEvent>
+    <bpmn:sequenceFlow id="Flow_1ccclw0" sourceRef="Activity_1tcjezw" targetRef="Event_1jf9w7i" />
+    <bpmn:endEvent id="Event_1hxv2ny" name="Credenciales Creadas">
+      <bpmn:incoming>Flow_1sxw5wf</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1sxw5wf" sourceRef="Activity_1tcjezw" targetRef="Event_1hxv2ny" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_0z7ho1f">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1txi3qa">
+        <dc:Bounds x="156" y="312" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="134" y="355" width="81" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1tcjezw_di" bpmnElement="Activity_1tcjezw">
+        <dc:Bounds x="245" y="290" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1jf9w7i_di" bpmnElement="Event_1jf9w7i">
+        <dc:Bounds x="277" y="182" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="190" y="190" width="65" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DataStoreReference_1d4hqfo_di" bpmnElement="DataStoreReference_1d4hqfo">
+        <dc:Bounds x="270" y="65" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="252" y="35" width="87" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1hxv2ny_di" bpmnElement="Event_1hxv2ny">
+        <dc:Bounds x="422" y="312" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="408" y="355" width="65" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1efygb2_di" bpmnElement="Flow_1efygb2">
+        <di:waypoint x="192" y="330" />
+        <di:waypoint x="245" y="330" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ccclw0_di" bpmnElement="Flow_1ccclw0">
+        <di:waypoint x="295" y="290" />
+        <di:waypoint x="295" y="218" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="DataOutputAssociation_1fr4txn_di" bpmnElement="DataOutputAssociation_1fr4txn">
+        <di:waypoint x="295" y="182" />
+        <di:waypoint x="295" y="115" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1sxw5wf_di" bpmnElement="Flow_1sxw5wf">
+        <di:waypoint x="345" y="330" />
+        <di:waypoint x="422" y="330" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
