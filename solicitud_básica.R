@@ -6,7 +6,7 @@ response <- GET(
   queryUrl,
   add_headers("Authorization" = paste("Bearer", token$access_token)),
   query = list(
-    ids = "channel==@OzleyASMR",  # Reemplaza con el ID de tu canal
+    ids = "channel==@OzleyASMR",  # Reemplaza con el ID del canal
     metrics = "views,estimatedMinutesWatched",
     dimensions = NULL,
     sort = NULL,
