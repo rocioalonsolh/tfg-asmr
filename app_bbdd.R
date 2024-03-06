@@ -29,13 +29,15 @@ ui <- fluidPage(
       textInput("nombre", "Nombre"),
       textInput("apellido", "Apellido"),
       numericInput("edad", "Edad", value = 18, min = 1),
-      textInput("genero", "Género"),
+      selectInput("genero", "Género", c("Masculino", "Femenino", "Prefiero no decirlo")),
       textInput("pais", "País"),
-      textInput("idioma", "Idioma"),
+      selectInput("idioma", "Idioma", c("Español", "English", "Français", "Deutsch")),
       textInput("usuario", "Usuario"),
       passwordInput("contrasena", "Contraseña"),
+      passwordInput("contrasena2", "Repetir Contraseña"),
       textInput("email", "Email"),
-      actionButton("guardar", "Guardar")
+      actionButton("guardar", "Guardar"),
+      textOutput("mensajeError")
     ),
     mainPanel(
       tableOutput("tablaUsuarios")
@@ -48,15 +50,20 @@ server <- function(input, output, session) {
   
   # Función para insertar datos en la base de datos
   insertarDatos <- function() {
-    dbExecute(
-      con,
-      "INSERT INTO usuarios (nombre, apellido, edad, genero, pais, idioma, usuario, contrasena, email) 
-      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
-      params = list(
-        input$nombre, input$apellido, input$edad, input$genero,
-        input$pais, input$idioma, input$usuario, input$contrasena, input$email
+    if (input$contrasena == input$contrasena2) {
+      dbExecute(
+        con,
+        "INSERT INTO usuarios (nombre, apellido, edad, genero, pais, idioma, usuario, contrasena, email) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+        params = list(
+          input$nombre, input$apellido, input$edad, input$genero,
+          input$pais, input$idioma, input$usuario, input$contrasena, input$email
+        )
       )
-    )
+      output$mensajeError <- renderText("Usuario registrado exitosamente.")
+    } else {
+      output$mensajeError <- renderText("Las contraseñas no coinciden. Inténtelo de nuevo.")
+    }
   }
   
   # Evento al hacer clic en el botón "Guardar"
