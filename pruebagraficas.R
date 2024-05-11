@@ -6,7 +6,7 @@ library(shinyWidgets)
 library(ggplot2)
 
 # Crear conexión a la base de datos
-conn <- dbConnect(RSQLite::SQLite(), "C:\\Users\\rocy1\\OneDrive\\Escritorio\\TFG\\usuarios.db")
+conn <- dbConnect(RSQLite::SQLite(), "C:/Users/Rocío/Desktop/TFG/TFG/bbdd/usuarios.db")
 
 # UI
 ui <- fluidPage(
@@ -61,14 +61,18 @@ server <- function(input, output) {
     # Gráfica de Horas de Sueño
     output$plot_horas_sueno <- renderPlot({
       ggplot(datos, aes(x = fecha, y = horas_sueno)) +
-        geom_bar(stat = "identity", fill = "pink") +  # Gráfico de barras
+        geom_point(color = "pink") +  # Gráfico de puntos
+        geom_line(color = "pink") +  # Línea que conecta los puntos
         labs(title = "Horas de Sueño", x = "Fecha", y = "Horas de Sueño")
     })
+    
+    
     
     # Gráfica de Despertares
     output$plot_despertares <- renderPlot({
       ggplot(datos, aes(x = fecha, y = despertares)) +
-        geom_bar(stat = "identity", fill = "skyblue") +  # Gráfico de barras
+        geom_point(color = "skyblue") +  # puntos
+        geom_line(color = "skyblue") +
         labs(title = "Número de Despertares", x = "Fecha", y = "Número de Despertares")
     })
     
