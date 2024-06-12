@@ -1,4 +1,7 @@
-# Trabajo de Fin de Grado, Ingeniería de la salud"
+# Trabajo de Fin de Grado, Ingeniería de la salud
+![image](https://github.com/rocioalonsolh/tfg-asmr/assets/79716332/ceb1db80-13be-41e6-affe-b1a65ad5e341)
+
+
 ## Respuesta Sensorial Meridiana Autónoma (ASMR): Análisis de la Experiencia Global y Desarrollo de una Aplicación de Recomendación supervisada de ASMR
 
 Este proyecto, realizado por Rocío Alonso las Heras, bajo la supervisión de Antonio Canepa y Estefanía Rivas, alumna de 4º en el Grado en Ingeniería de la Salud, impartido en la Universidad de Burgos, tiene como propósito el estudio del fenómeno conocido como Respuesta Sensorial Meridiana Autónoma (ASMR en adelante), haciendo una revisión del estado del arte de las publicaciones relacionadas. 
@@ -11,14 +14,9 @@ Por último, este repositorio va a contener el código, realizado mayormente en 
 
 1. [Introducción](#introducción)
 2. [Características](#características)
-3. [Requisitos del Sistema](#requisitos-del-sistema)
-4. [Instalación](#instalación)
-5. [Uso](#uso)
-6. [Estructura del Proyecto](#estructura-del-proyecto)
-7. [Tecnologías Utilizadas](#tecnologías-utilizadas)
-8. [Contribuciones](#contribuciones)
-9. [Licencia](#licencia)
-10. [Agradecimientos](#agradecimientos)
+3. [Estructura del Proyecto](#estructura-del-proyecto)
+4. [Tecnologías Utilizadas](#tecnologías-utilizadas)
+5. [Agradecimientos](#agradecimientos)
 
 ## Introducción
 Para poder entender este proyecto es prioritaria la aclaración de 6 puntos clave en torno a los que se ha basado:
@@ -51,12 +49,26 @@ Para el desarrollo de esta aplicación se ha escogido utilizar RStudio con el pa
 En resumen, una aplicación que utiliza ASMR para ayudar con el insomnio de conciliación podría ofrecer una solución personalizada y atractiva para mejorar la calidad del sueño, aprovechando las plataformas sociales como YouTube y herramientas de desarrollo como RStudio con Shiny y tuber para crear una experiencia única y efectiva.
 
 ## Características
+Este proyecto se trata de una solución tecnológica para pacientes con insomnio de conciliación, que mediante una aplicación Shiny desarrollada en R, permite a los usuarios un acceso sencillo a vídeos ASMR que pueden ser beneficiosos en el tratamiento de su patología. Se trata de una aplicación web sencilla, diseñada con una base de datos local, que presenta un prototipo de una futura posible aplicación real, diseñada bajo estas pautas.
+
+## Estructura del proyecto
+Este proyecto consta de una aplicación Shiny y una base de datos, presentes en la carpeta app. Toda la documentación relativa se encuentra en la carpeta "docs". 
+
+## Tecnologías utilizadas
+Las principales herramientas utilizadas han sido
+### 1. R
+### 2. RStudio
+### 3. SQL
+### 4. SQLite-DB Browser
+### 5. Shiny
+### 6. Google Cloud Platform
+### 7. Youtube Data API
+### 8. Youtube
+### 9. Visual Studio Code
+
+## Agradecimientos
+Le agradezco su ayuda tanto a Antonio como a Estefanía, por haberme guiado en este proyecto.
 
 
-## Requisitos del Sistema
-
-
-
-## Instalación
 
 
