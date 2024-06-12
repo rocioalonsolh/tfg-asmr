@@ -2,9 +2,10 @@
 ![image](https://github.com/rocioalonsolh/tfg-asmr/assets/79716332/ceb1db80-13be-41e6-affe-b1a65ad5e341)
 
 
-## Respuesta Sensorial Meridiana Autónoma (ASMR): Análisis de la Experiencia Global y Desarrollo de una Aplicación de Recomendación supervisada de ASMR
+## ASMR Sleep. Aplicación de recomendación y análisis de vídeos destinada a pacientes con Insomnio de Conciliación.
 
-Este proyecto, realizado por Rocío Alonso las Heras, bajo la supervisión de Antonio Canepa y Estefanía Rivas, alumna de 4º en el Grado en Ingeniería de la Salud, impartido en la Universidad de Burgos, tiene como propósito el estudio del fenómeno conocido como Respuesta Sensorial Meridiana Autónoma (ASMR en adelante), haciendo una revisión del estado del arte de las publicaciones relacionadas. 
+
+Este proyecto, realizado por Rocío Alonso las Heras, bajo la supervisión de Antonio Canepa y Estefanía Rivas, alumna de 4º en el Grado en Ingeniería de la Salud, impartido en la Universidad de Burgos, tiene como propósito el estudio del fenómeno conocido como Respuesta Sensorial Meridiana Autónoma, con el propósito de diseñar una aplicación que permita a los usuarios un acceso facil a este recurso. 
 
 Se pretende también realizar una propuesta de uso de este efecto en pacientes con insomnio de conciliación, revisando las carácteristicas principales de esta patología para entender cómo podría ser de utilidad para ella este fenómeno.
 
