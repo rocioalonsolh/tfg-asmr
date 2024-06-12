@@ -76,6 +76,7 @@ ui <- fluidPage(
                textInput("search_term", "Introduce tu búsqueda:", ""),
                actionButton("search_button", "Buscar"),
                tableOutput("preferences") # Para mostrar las preferencias del usuario
+               etiquetas_no_me_gusta <- pref$no_me_gusta
              ),
              
              # Muestra en el centro los resultados de la búsqueda
@@ -632,6 +633,9 @@ server <- function(input, output, session) {
       
       # Filtra los resultados que tienen etiquetas
       results <- filter(results, str_detect(description, "#\\w+"))
+      #Filtra los resultados que tienen etiquetas marcadas como "no me gusta"
+      results <- filter(results, !str_detect(description, paste(etiquetas_no_me_gusta, collapse = "|")))
+      
       
       # Si hay resultados con etiquetas, se agregan al dataframe
       if(nrow(results) > 0) {
